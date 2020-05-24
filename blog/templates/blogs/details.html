@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+<br>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="container-fluid p-3 my-3 bg-dark text-white">
+    			<h1 align="center">{{ blog.title }}</h1>
+			</div>
+			<br>
+			<h5 class="text-center">
+				{{ blog.date|date:'F jS Y' }}
+			</h5>
+			<br>
+				<h3 class="text-break">
+					{{ blog.post|safe }}
+				</h3>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

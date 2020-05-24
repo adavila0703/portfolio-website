@@ -1,0 +1,19 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+<div class="container-fluid p-3 my-3 bg-dark text-white">
+    <h3 align="center">Blog posts: {{ blogs.count }}</h3>
+</div>
+
+{% for blog in blogs %}
+
+<a href="{% url 'blog:detail' blog.id %}">
+    <div class="jumbotron" class="badge badge-secondary" data-toggle="tooltip" title="Click to continue reading.">
+        <h1>{{ blog.title }}</h1>
+        <h4>{{ blog.date|date:'M j Y'| upper }}</h4>
+    </div> </a>
+
+
+{% endfor %}
+
+{% endblock %}

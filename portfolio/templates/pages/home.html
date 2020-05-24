@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+{% extends 'pages/base.html' %}
+
+{% block content %}
+    {% load static %}
+
+<!--    <br>-->
+<!--    {% for project in projects %}-->
+<!--    <a href="{% static 'portfolio/Angel Davila - Resume.pdf' %}">Resume</a>-->
+
+<!--    <h2>{{ project.title }}</h2>-->
+<!--    <p>{{ project.description }}</p>-->
+<!--    <img src="{{ project.image.url }}">-->
+<!--    {% if project.url %}-->
+<!--    <br>-->
+<!--        <a href="{{ project.url }}">Link</a>-->
+<!--    {% endif %}-->
+<!--    {% endfor %}-->
+
+
+
+<div class="jumbotron" align="center">
+  <h1>Angel Davila</h1>
+    <br>
+    <img src="{% static 'portfolio/newprofpic.jpg' %}" class="rounded-circle" width="500" height="500" align="center">
+</div>
+
+<div class="row">
+    <div class="col" align="center">
+      <a href="https://github.com/adavila0703" btn btn-outline-danger" type="submit">
+        <img src="{% static 'portfolio/github.jpg' %}" data-toggle="tooltip" title="Click to see Angel's GitHub" class="" width="300" height="125" align="center"></a>
+    </div>
+      <div class="col" align="center">
+             <br>
+              <a href="https://linkedin.com/in/angelrdavila/" btn btn-outline-dark" type="submit">
+                <img src="{% static 'portfolio/linkedin.jpg' %}" data-toggle="tooltip" title="Click to see Angel's LinkedIn" class="" width="350" height="115" align="center">
+              </a>
+      </div>
+      <div class="col" align="center">
+          <br>
+          <a href="{% static 'portfolio/Angel Davila - Resume.pdf' %}" btn btn-outline-dark" type="submit"><h1 class="display-1" class="font-weight-bold">
+            <img
+                    src="{% static 'portfolio/resume.jpg' %}" data-toggle="tooltip" title="Click to see Angel's Resume" class="" width="340" height="85" align="center"></h1>
+          </a>
+      </div>
+</div>
+
+
+
+
+{% endblock %}
